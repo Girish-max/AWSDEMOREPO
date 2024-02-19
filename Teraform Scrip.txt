@@ -1,0 +1,58 @@
+Teraform Script writing 
+1. Insilize a new terraform project 
+2. visual studio terminal 
+3. create a folder with the name teraform and navigate to the visual studio 
+4. Create a File > main.tf \\teraform 
+5. define provider ( Ex: AWS)| Provider name 
+6. Provider "aws" {
+region= "us-east-1"
+access_key = "your_key"
+secret_key = "provide secret key"
+}
+
+7.Define Ec2 instance
+
+resource "AWS_Instance" "any Name"
+ami = "ami"
+instance_type ="t2.micro"
+}
+
+output:
+
+output "instance_ip" { value = aws+instance.<instance name.public_ip
+
+}
+
+Plan:
+
+terraform plan
+
+Apply:
+
+terraform apply
+
+If you do not want the instance the command 
+
+destroy
+
+terraform destroy
+
+===========================================
+
+Does in Teraform : 
+
+1. Use version control " code commit service, Github and it should be in privite reprositry 
+2. Modularize your code : Like reusable code
+3. Use variables and input files
+4. Document your code : 
+5. Use Remote State:
+6. Plan before Apply 
+7. Right Provider
+
+Donts in Teraform:
+
+1.Hardcode secrets
+2. Avoid IP address in the code 
+3. Ignore terraform 
+
+
